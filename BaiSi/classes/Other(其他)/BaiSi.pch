@@ -1,0 +1,66 @@
+
+/*
+ 作用：存放(声明)公用宏，公用的头文件，自定义Log
+ 特点：预编译，提前编译，可以在项目的所有文件中使用
+ */
+
+#ifdef __OBJC__ 
+
+/* 公用的头文件 */
+#import "UIView+Frame.h"
+
+#endif
+
+
+/* 屏幕的尺寸 */
+#define YJScreenW [UIScreen mainScreen].bounds.size.width
+#define YJScreenH [UIScreen mainScreen].bounds.size.height
+
+/* 屏幕适配 */
+#define iphone4 YJScreenH == 480
+#define iphone5 YJScreenH == 568
+#define iphone6 YJScreenH == 667
+#define iphone6p YJScreenH == 736
+
+/* 颜色 */
+#define YJRandomColor [UIColor colorWithRed:(arc4random_uniform(256)/255.0) green:(arc4random_uniform(256)/255.0) blue:(arc4random_uniform(256)/255.0) alpha:1.0]
+/** 根据RGB的值返回颜色的对象 */
+#define YJColor(r,g,b) [UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:1.0]
+// 背景颜色
+#define YJBgColor YJColor(182, 182, 182);
+
+
+/* 自定义Log */
+// 作用:在测试的时候,打印日志;在发布的时候，让打印日志失效
+#if DEBUG
+// 测试
+// 3个点是可变参数 __VA_ARGS__:可变参数的宏
+#define YJLog(...) NSLog(__VA_ARGS__)
+
+#else
+// 发布
+#define YJLog(...)
+
+#endif
+
+#define YJLogFunc YJLog(@"%s",__func__);
+
+//服务器的请求地址
+#define YJHostUrl @"http://api.budejie.com/api/api_open.php"
+
+#define YJWeakSelf __weak typeof(self) weakSelf = self
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

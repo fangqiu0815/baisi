@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YJAdViewController">
+            <connections>
+                <outlet property="adView" destination="Ok7-Vl-Sr7" id="fQy-Kd-aRG"/>
+                <outlet property="bgImageView" destination="fiK-us-A2L" id="bV2-nC-zZ8"/>
+                <outlet property="jumpBtn" destination="v4h-Pu-ZIq" id="cwv-kd-vqD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fiK-us-A2L" userLabel="BgImage View"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ok7-Vl-Sr7" userLabel="占位View">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4h-Pu-ZIq">
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="跳过(3)"/>
+                    <connections>
+                        <action selector="jumpClick" destination="-1" eventType="touchUpInside" id="zOl-9b-dNk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fiK-us-A2L" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6sg-HV-wzi"/>
+                <constraint firstAttribute="trailing" secondItem="fiK-us-A2L" secondAttribute="trailing" id="ECN-eL-79L"/>
+                <constraint firstItem="v4h-Pu-ZIq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="Ru2-HF-Ngl"/>
+                <constraint firstItem="Ok7-Vl-Sr7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Viw-px-ePd"/>
+                <constraint firstAttribute="bottom" secondItem="fiK-us-A2L" secondAttribute="bottom" id="Ykr-sl-cmp"/>
+                <constraint firstAttribute="bottom" secondItem="Ok7-Vl-Sr7" secondAttribute="bottom" id="ajG-vZ-sR2"/>
+                <constraint firstItem="fiK-us-A2L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fPX-mX-t1N"/>
+                <constraint firstItem="Ok7-Vl-Sr7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hYi-Nw-XRv"/>
+                <constraint firstAttribute="trailing" secondItem="v4h-Pu-ZIq" secondAttribute="trailing" constant="40" id="hrt-6S-Q2r"/>
+                <constraint firstAttribute="trailing" secondItem="Ok7-Vl-Sr7" secondAttribute="trailing" id="rap-1O-c6x"/>
+            </constraints>
+            <point key="canvasLocation" x="356.5" y="392.5"/>
+        </view>
+    </objects>
+</document>

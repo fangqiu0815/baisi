@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yhs-jp-QZ8" customClass="YJPictureView">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nPg-Vm-vMC" userLabel="图片"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="Tps-VC-U3Q" userLabel="GIF">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="31" id="HM0-aM-BiN"/>
+                        <constraint firstAttribute="height" constant="31" id="yze-XJ-z5V"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTr-fI-9s0" userLabel="点击查看全图">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="Hgq-yT-LUT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="点击查看全图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vhN-WN-kOv" userLabel="占位图片">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Vuk-E4-EqZ"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4l9-5f-TAT" userLabel="进度条">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="66R-M1-Fbu"/>
+                        <constraint firstAttribute="height" constant="60" id="AuX-Rr-wNX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="nPg-Vm-vMC" secondAttribute="bottom" id="5hZ-Ee-BMx"/>
+                <constraint firstItem="4l9-5f-TAT" firstAttribute="centerY" secondItem="yhs-jp-QZ8" secondAttribute="centerY" id="6cz-s0-nBm"/>
+                <constraint firstItem="Tps-VC-U3Q" firstAttribute="leading" secondItem="nPg-Vm-vMC" secondAttribute="leading" id="BLY-a7-bZW"/>
+                <constraint firstItem="Tps-VC-U3Q" firstAttribute="top" secondItem="yhs-jp-QZ8" secondAttribute="top" id="ByM-0e-Ego"/>
+                <constraint firstAttribute="trailing" secondItem="oTr-fI-9s0" secondAttribute="trailing" id="Crm-wx-Tv7"/>
+                <constraint firstItem="vhN-WN-kOv" firstAttribute="top" secondItem="yhs-jp-QZ8" secondAttribute="top" constant="20" id="FRh-ce-R6b"/>
+                <constraint firstAttribute="trailing" secondItem="nPg-Vm-vMC" secondAttribute="trailing" id="FZF-7W-u2h"/>
+                <constraint firstItem="vhN-WN-kOv" firstAttribute="leading" secondItem="yhs-jp-QZ8" secondAttribute="leading" id="Hvq-4F-ppR"/>
+                <constraint firstItem="nPg-Vm-vMC" firstAttribute="leading" secondItem="yhs-jp-QZ8" secondAttribute="leading" id="Xh7-wS-GWh"/>
+                <constraint firstAttribute="trailing" secondItem="vhN-WN-kOv" secondAttribute="trailing" id="hT0-Aj-Mqm"/>
+                <constraint firstAttribute="bottom" secondItem="oTr-fI-9s0" secondAttribute="bottom" id="m1I-nV-TY3"/>
+                <constraint firstItem="nPg-Vm-vMC" firstAttribute="top" secondItem="yhs-jp-QZ8" secondAttribute="top" id="nkg-V1-Gdb"/>
+                <constraint firstItem="oTr-fI-9s0" firstAttribute="leading" secondItem="yhs-jp-QZ8" secondAttribute="leading" id="nmC-AV-2hw"/>
+                <constraint firstItem="4l9-5f-TAT" firstAttribute="centerX" secondItem="yhs-jp-QZ8" secondAttribute="centerX" id="xhh-xS-fod"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bigBtn" destination="oTr-fI-9s0" id="t2k-aW-ssB"/>
+                <outlet property="gifImageView" destination="Tps-VC-U3Q" id="OsE-aW-0zH"/>
+                <outlet property="iconImageView" destination="nPg-Vm-vMC" id="4c3-ft-N3Q"/>
+            </connections>
+            <point key="canvasLocation" x="279" y="-87"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common-gif" width="31" height="31"/>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="see-big-picture" width="19" height="19"/>
+        <image name="see-big-picture-background" width="285" height="43"/>
+    </resources>
+</document>
